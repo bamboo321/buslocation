@@ -28,6 +28,7 @@ class Destination:
     def __init__(self, bcode):
         self.bcode = bcode
         self.destlist = self.fetch_destlist()
+        self.choosed_destlist = []
 
     def fetch_destlist(self):
         params = {'id': self.bcode}
@@ -47,13 +48,16 @@ class Destination:
 
         return destlist
 
+    def choose_dest(self, *destsname):
+        print(destsname)
+        self.choosed_destlist = [destdict for destdict in self.choosed_destlist if destdict.get('dist') in destsname]
 
 
+class Location:
+    baseURL = ''
 
-        
-
-
-
+    def __init__(self):
+        pass
 
 
 
