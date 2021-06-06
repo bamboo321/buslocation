@@ -50,7 +50,7 @@ class Destination:
 
     def choose_dest(self, *destsname):
         print(destsname)
-        self.choosed_destlist = [destdict for destdict in self.choosed_destlist if destdict.get('dist') in destsname]
+        self.choosed_destlist = [destdict for destdict in self.destlist if destdict.get('dist') in destsname]
 
 
 class Location:
